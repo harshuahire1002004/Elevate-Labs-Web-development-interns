@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" type="text/css" href=" calculator-style.css">
+    <script type="text/javascript">
+        var a, b, c, d, flag = 0;
+        
+        
+        function perform(value) {
+            if (flag == 0) {
+                b = value;
+                a = document.f1.t1.value;
+                document.f1.t1.value = "";
+                flag = 1;
+            } else {
+                c = document.f1.t1.value;
+                document.f1.t1.value = "";
+                switch (b) {
+                    case '+':
+                        d = parseFloat(a) + parseFloat(c);
+                        break;
+                    case '-':
+                        d = parseFloat(a) - parseFloat(c);
+                        break;
+                    case '*':
+                        d = parseFloat(a) * parseFloat(c);
+                        break;
+                    case '/':
+                        if (parseFloat(c) == 0) {
+                            alert("Cannot divide by zero");
+                            return;
+                        }
+                        d = parseFloat(a) / parseFloat(c);
+                        break;
+                    case '%':
+                        d = parseFloat(a) % parseFloat(c);
+                        break;
+                }
+                document.f1.t1.value = d;
+                flag = 0;
+            }
+        }
+
+        function calculate() {
+            perform(b);
+        }
+
+        function clearInput() {
+            document.f1.t1.value = "";
+            flag = 0;
+        }
+    </script>
+</head>
+<body>
+    <form name="f1">
+        <table border="1">
+            <tr>
+                <td colspan="4"><input type="text" name="t1" value="" readonly/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onclick="document.f1.t1.value+='0'"/></td>
+                <td><input type="button" value="1" onclick="document.f1.t1.value+='1'"/></td>
+                <td><input type="button" value="2" onclick="document.f1.t1.value+='2'"/></td>
+                <td><input type="button" value="+" onclick="perform('+')"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="3" onclick="document.f1.t1.value+='3'"/></td>
+                <td><input type="button" value="4" onclick="document.f1.t1.value+='4'"/></td>
+                <td><input type="button" value="5" onclick="document.f1.t1.value+='5'"/></td>
+                <td><input type="button" value="-" onclick="perform('-')"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="6" onclick="document.f1.t1.value+='6'"/></td>
+                <td><input type="button" value="7" onclick="document.f1.t1.value+='7'"/></td>
+                <td><input type="button" value="8" onclick="document.f1.t1.value+='8'"/></td>
+                <td><input type="button" value="*" onclick="perform('*')"/></td>
+            </tr>
+            <tr>
+                
+                <td><input type="button" value="9" onclick="document.f1.t1.value+='9'"/></td>
+                <td><input type="button" value="C" onclick="clearInput()"/></td>
+                <td><input type="button" value="=" onclick="calculate()"/></td>
+                <td><input type="button" value="/" onclick="perform('/')"/></td>
+            </tr>
+            <tr>
+                <td colspan="4"><input type="button" value="%" onclick="perform('%')"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+
+
+
