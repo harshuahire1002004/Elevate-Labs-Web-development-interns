@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">🍔 BurgerFactory</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Shop</a></li>
+      </ul>
+    </nav>
+    <div class="icons">
+      <a href="#">🔍</a>
+      <a href="#">🛒</a>
+      <a href="#">🏠</a>
+    </div>
+  </header>
+
+ <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>THE HARIDRA'S ULTIMATE<br> BURGER DEAL</h1>
+    <p>"Where hunger ends and happiness begins — your ultimate burger destination!"
+       Not just food, it’s a flavor explosion! Bold, fresh, and made to satisfy your cravings like never before.
+    </p>
+    <div class="buttons">
+      <a href="#" class="btn">Order Now</a>
+      <a href="#" class="btn-outline">View More</a>
+    </div>
+  </div>
+
+  <div class="hero-img">
+    <!-- 👇 added ID so JavaScript can target this image -->
+    <img id="burgerSlider" src="images/burger-1.jpg" alt="Burger">
+  </div>
+</section>
+
+<!-- Image Slider Script -->
+<script>
+  const sliderImages = [
+    "images/burger-1.jpg",
+    "images/burger-2.jpg",
+    "images/burger-3.jpg",
+    "images/burger-4.jpg"
+  ];
+
+  let currentIndex = 0;
+  const imgElement = document.getElementById("burgerSlider");
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % sliderImages.length;
+    imgElement.src = sliderImages[currentIndex];
+  }, 3000); // changes every 3 seconds
+</script>
+
+
+  <!-- Menu Slider Section -->
+  <section class="menu">
+    <h2>Our Popular Burgers</h2>
+    <div class="menu-items">
+      <img src="images/burger-1.jpg" alt="Burger 1">
+      <img src="images/burger-2.jpg" alt="Burger 2">
+      <img src="images/burger-3.jpg" alt="Burger 3">
+      <img src="images/burger-4.jpg" alt="Burger 4">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BurgerFactory. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

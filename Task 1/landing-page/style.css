@@ -1,0 +1,172 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: orange;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: orange;
+}
+
+.icons a {
+  margin-left: 15px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  background: orange;
+  padding: 12px 24px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  padding: 10px 22px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.hero-img img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+/* Menu Section */
+.menu {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.menu h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: orange;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-items img {
+  width: 180px;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.menu-items img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    padding: 0;
+  }
+
+  .hero-img {
+    margin-top: 20px;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-img img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 20px;
+  transition: opacity 0.8s ease-in-out;
+}
+
+}
