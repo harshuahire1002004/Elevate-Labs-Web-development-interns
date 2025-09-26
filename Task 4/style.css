@@ -1,0 +1,138 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 10px 20px;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul.menu li a {
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #4CAF50;
+  color: #fff;
+}
+
+.hero .btn {
+  background: #333;
+}
+
+/* Features / Courses */
+.features, .courses {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature, .course-card {
+  background: #f4f4f4;
+  flex: 1 1 250px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.feature h2, .course-card h2 {
+  color: #333;
+}
+
+/* Sections */
+.about-section, .contact-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+}
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 80px 20px;
+  color: #fff;
+  background: url('background.jpg') no-repeat center center/cover; /* your image */
+}
+
+/* Optional: dark overlay for better readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Ensure text is above overlay */
+.hero h1,
+.hero p,
+.hero .btn {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 15px; /* reduce padding on small screens */
+    background-position: top center; /* adjust position for small screens */
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
