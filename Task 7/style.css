@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fa;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+.user-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.user-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 250px;
+  margin: 10px;
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.user-card:hover {
+  transform: scale(1.05);
+}
+
+.user-card h2 {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #2c3e50;
+}
+
+.user-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#searchBar {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#searchBar:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
